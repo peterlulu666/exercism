@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ResistorColorDuoTest" tests="5" skipped="4" failures="0" errors="0" timestamp="2019-12-10T23:15:12" hostname="ide" time="0.091">
+<testsuite name="ResistorColorDuoTest" tests="5" skipped="4" failures="0" errors="0" timestamp="2019-12-11T00:30:01" hostname="ide" time="0.088">
   <properties/>
-  <testcase name="testBrownAndBlack" classname="ResistorColorDuoTest" time="0.01"/>
+  <testcase name="testBrownAndBlack" classname="ResistorColorDuoTest" time="0.007"/>
   <testcase name="testBlueAndGrey" classname="ResistorColorDuoTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testOrangeAndOrange" classname="ResistorColorDuoTest" time="0.0">
+  <testcase name="testOrangeAndOrange" classname="ResistorColorDuoTest" time="0.001">
     <skipped/>
   </testcase>
   <testcase name="testYellowAndViolet" classname="ResistorColorDuoTest" time="0.0">
