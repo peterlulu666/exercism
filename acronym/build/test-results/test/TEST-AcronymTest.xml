@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AcronymTest" tests="9" skipped="8" failures="0" errors="0" timestamp="2019-12-18T23:06:43" hostname="ide" time="0.093">
+<testsuite name="AcronymTest" tests="9" skipped="8" failures="0" errors="0" timestamp="2019-12-18T23:10:09" hostname="ide" time="0.094">
   <properties/>
   <testcase name="underscoreEmphasis" classname="AcronymTest" time="0.0">
     <skipped/>
@@ -10,7 +10,7 @@
   <testcase name="apostrophes" classname="AcronymTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="basic" classname="AcronymTest" time="0.092"/>
+  <testcase name="basic" classname="AcronymTest" time="0.093"/>
   <testcase name="veryLongAbbreviation" classname="AcronymTest" time="0.0">
     <skipped/>
   </testcase>

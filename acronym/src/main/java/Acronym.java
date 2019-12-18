@@ -19,7 +19,6 @@ class Acronym {
 
         }
         return abbreviate;
-
 //        var wordArr = cleanWords();
 //        var wordList = arrayToList(wordArr);
 //        String abbreviate = "";
