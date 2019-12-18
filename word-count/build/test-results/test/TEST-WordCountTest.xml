@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordCountTest" tests="13" skipped="12" failures="0" errors="0" timestamp="2019-12-17T22:21:59" hostname="ide" time="0.103">
+<testsuite name="WordCountTest" tests="13" skipped="12" failures="0" errors="0" timestamp="2019-12-18T17:49:23" hostname="ide" time="0.19">
   <properties/>
   <testcase name="handlesExpandedLists" classname="WordCountTest" time="0.0">
     <skipped/>
@@ -22,7 +22,7 @@
   <testcase name="withApostrophes" classname="WordCountTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="countOneWord" classname="WordCountTest" time="0.1"/>
+  <testcase name="countOneWord" classname="WordCountTest" time="0.188"/>
   <testcase name="alternatingWordSeperatorsNotDetectedAsAWord" classname="WordCountTest" time="0.0">
     <skipped/>
   </testcase>

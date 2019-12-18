@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class WordCount {
     String sentence = "";
@@ -8,7 +10,7 @@ public class WordCount {
     }
 
 
-    public List<String> cleanWords() {
+    public String[] cleanWords() {
         // String to array of character
         this.sentence = this.sentence.toLowerCase();
         char[] letterArr = new char[this.sentence.length()];
@@ -65,11 +67,17 @@ public class WordCount {
 //        }
 //        return pureWordArr;
         // Split
+        // Strip
         String[] wordArr = wordString.replace(" '", "").replace("' ", "").trim().split(" ");
-        // Array to list
+
+        return wordArr;
+    }
+
+    public List<String> arrayToList(String[] wordArr) {
         List<String> list = new ArrayList<String>(Arrays.asList(wordArr));
         list.removeAll(Arrays.asList("", null));
         return list;
+
     }
 
 //    public List<String> cleanWords() {
@@ -85,19 +93,29 @@ public class WordCount {
 //        return list;
 //    }
 
-    public Map<String, Integer> countFrequencies(ArrayList<String> list) {
+    public Map<String, Integer> countFrequency(ArrayList<String> wordList) {
         // hashmap to store the frequency of element
-        Map<String, Integer> hm = new HashMap<String, Integer>();
+        Map<String, Integer> counter = new HashMap<String, Integer>();
 
-        for (String i : list) {
-            Integer j = hm.get(i);
-            hm.put(i, (j == null) ? 1 : j + 1);
+        for (String word : wordList) {
+            Integer count = counter.get(word);
+            // If word is not in hashMap
+            // If counter.get(word) return null, the word is not in hashMap
+            if (count == null){
+                counter.put(word, 1);
+
+            }
+            else {
+                counter.put(word, count + 1);
+
+            }
         }
 
+
         // displaying the occurrence of elements in the arraylist
-        return hm;
+        return counter;
 //        String wordsFrequency = "";
-//        for (Map.Entry<String, Integer> val : hm.entrySet()) {
+//        for (Map.Entry<String, Integer> val : hashMap.entrySet()) {
 //            wordsFrequency = wordsFrequency + val.getKey() + " : " + val.getValue() + "\n";
 //
 //        }
@@ -105,10 +123,17 @@ public class WordCount {
 
     }
 
+    public Map<String, Integer> countFrequencies(String[] wordArray) {
+        return Arrays.asList(wordArray).stream().collect(Collectors.groupingBy(Function.identity(), Collectors.summingInt(i -> 1)));
+
+    }
+
     public Map<String, Integer> phrase(String sentence) {
         this.sentence = sentence;
-        var list = cleanWords();
-        return countFrequencies((ArrayList<String>) list);
+        var wordArray = cleanWords();
+        var list = arrayToList(wordArray);
+        return countFrequency((ArrayList<String>) list);
+//        return countFrequencies(wordArray);
 
     }
 
