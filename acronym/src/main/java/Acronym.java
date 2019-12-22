@@ -61,6 +61,7 @@ class Acronym {
 
     }
 
+//    // Remove all punctuation except single apostrophe
 //    public String[] cleanWords() {
 //        String wordString = this.phrase.toUpperCase()
 //                .replaceAll("[^A-Z0-9']", " ")
@@ -69,6 +70,14 @@ class Acronym {
 //        // Split
 //        String[] wordArr = wordString.split(" ");
 //
+//        return wordArr;
+//
+//    }
+
+//    // Remove all punctuation include single apostrophe
+//    public String[] cleanWords() {
+//        // Split
+//        String[] wordArr = this.phrase.split("[^A-Za-z0-9]");
 //        return wordArr;
 //
 //    }
